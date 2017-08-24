@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 
-<!-- Startpage of "Brinx"
-This is the official startpage for Brinx and was designed completely freehand. -->
+<!-- Brinx's First Startpage -->
 
 <html>
 <head>
 <!-- To change Favicon (icon in tab) replace file located at webpage root. "favicon.ico" -->
 <link rel="icon" href="favicon.ico"/>
  
- <!-- This is the title within the tab. -->
+<!-- This is the title within the tab. -->
 <title>° . °</title>
  
+<!-- Styles: used to format the web page. -->
+<style type="text/css">
+:root {
+--content-bg: #1d1e2a;
+--titlebar: #1415F;
+--altbg: #1a1b26;
+}
+
+html, body {
+	background: url('images/bg/1.jpg') fixed center;
+	background-size: cover;
+}
+
+</style>
+ 
+ 
+<!-- Search Bar -->
+<div id="searchcontainer">
+	<form class="search" method="get" action="https://google.com/search">
+		<input class="searchBar" type="text" name="q" placeholder="Search" autofocus search_/>
+	</form>
+</div>
+
+<!-- Tab 1 -->
+<div id="LinksTab" class="tabcontent">
+	<p>
+		<div id="links">
+			<a href="https://www.facebook.com/">Facebook</a> <a href="https://m.me/">Messenger</a>
+			<a href="https://www.facebook.com/">Twitter</a>
+			<a href="https://www.facebook.com/">Instagram</a>
+		</div>
+	</p>
+</div>
  
 </head>
 </html>
