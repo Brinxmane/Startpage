@@ -20,10 +20,145 @@ html, body {
 
 /* Font Styling */
 #content {
-	font-family: "Open Sans";
+	font-family: "Open Sans", "Tahoma";
 	font-size: 16px;
 	text-decoration: none !important
+	font-variant: small-caps;
 }
+p.normal {
+	font-family: "Comic Sans MS";
+	font-size: 18px;
+	text-decoration: underline !important
+	font-variant: normal;
+	color: #D3B1A9;
+}
+p.small {
+	font-family: "Comic Sans MS";
+	font-size: 18px;
+	text-decoration: underline !important
+	font-variant: small-caps;
+	color: #D3B1A9;
+}
+
+span {
+	color: #D7BFBA;
+}
+
+span {
+	color: #D7BFBA;
+	text-decoration: underline !important
+}
+
+/* Links */
+a:link, a:visited {
+	color: #D7BFBA;
+	text-decoration: none;
+}
+/* Mouse Over */
+a:hover {
+	color: #F03710;
+	text-decoration: underline;
+}
+
+/* Content Margin (NOT ACTIVE)*/
+/*
+#content {
+	border: 1px solid black;
+	margin: 32% 29%;
+	background-color: ;
+	position: ;
+}
+*/
+
+/* Tab 1 */
+#sociallinks {
+	text-align: center;
+	left: 15%
+	top: 40%
+	position: absolute;
+}
+
+#generallinks {
+	text-align: center;
+	left: 30%
+	top: 40%
+	position: absolute;
+}
+
+#medialinks {
+	text-align: center;
+	left: 45%
+	top: 40%
+	position: absolute;
+}
+
+#musiclinks {
+	text-align: center;
+	left: 60%
+	top: 40%
+	position: absolute;
+}
+
+#gamelinks {
+	text-align: center;
+	left: 75%
+	top: 40%
+	position: absolute;
+}
+
+/* Dropdowns (NOT IN USE) *
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Facebook 
+.dropdown-facebook {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-facebook {
+	display: block;
+}*/
+
+/* Mail */
+.dropdown-mail {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-mail {
+	display: block;
+}
+
+/* YouTube */
+.dropdown-youtube {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-youtube {
+	display: block;
+}
+
+/* Steam */
+.dropdown-steam {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-steam {
+	display: block;
+}*/
 </style>
  
 <!-- Webpage Body -->
@@ -39,32 +174,55 @@ html, body {
 
 <!-- Tab 1 -->
 <div id="LinksTab" class="tabcontent">
-	<p>
-		<div id="sociallinks">
+	<div id="sociallinks">
+		<p class="small">Social</p>
+			<span class="ul">Facebook</span>
+			<p></p>
 			<a href="https://www.facebook.com/">Home</a>
 			<a href="https://m.me/">Message</a>
-			<p> </p>
+			<p></p>
 			<a href="https://www.facebook.com/">Twitter</a>
 			<a href="https://www.facebook.com/">Instagram</a>
-		</div>
+	</div>
+	
+	<div id="generallinks">
+		<p class="small">General</p>
+			<span>Mail</span>
+			<p></p>
+			<a href="https://www.hotmail.com">Hotmail</a>
+			<a href="https://mail.google.com/mail/u/0/">Gmail</a>
+			<p></p>
+			<a href="https://www.evernote.com">Evernote</a>
+	</div>
 		
-		<div id="medialinks">
+	<div id="medialinks">
+		<p class="small">Media</p>
+		<div class="dropdown">
+			<span>YouTube</span>
+			<p></p>
+		<div class="dropdown-youtube">
 			<a href="https://www.youtube.com/feed/subscriptions">Feed</a>
-			<a href="https://www.youtube.com/playlist?list=WL">Watch</a>
-			<p> </p>
+			<a href="https://www.youtube.com/playlist?list=WL">Watch List</a>
+			<p></p>
 			<a href="https://www.netflix.com/browse">Netflix</a>
 		</div>
+	</div>
 		
-		<div id="musiclinks">
+	<div id="musiclinks">
+		<p class="small">Music</p>
 			<a href="https://soundcloud.com">SoundCloud</a>
 			<a href="https://play.spotify.com/browse">Spotify</a>
-		</div>
+	</div>
 		
-		<div id="gamelinks">
+	<div id="gamelinks">
+		<p class="small">Game</p>
+		<div class="dropdown">
+			<span>Steam</span>
+		<div class="dropdown-steam">
 			<a href="http://store.steampowered.com">Store</a>
 			<a href="http://steamcommunity.com/my/home">Home</a>
 		</div>
-	</p>
+	</div>
 </div>
  
  </div>
