@@ -20,40 +20,52 @@ html, body {
 
 /* Font Styling */
 #content {
-	font-family: "Open Sans", "Tahoma";
+	font-family: "Ubuntu", "Tahoma";
 	font-size: 16px;
-	text-decoration: none !important
-	font-variant: small-caps;
-}
-p.normal {
-	font-family: "Comic Sans MS";
-	font-size: 18px;
-	text-decoration: underline !important
+	text-decoration: none !important;
 	font-variant: normal;
+}
+p.upper {
+	font-family: "Ubuntu Mono", "Comic Sans MS";
+	font-size: 18px;
+	text-decoration: ;
+	text-transform: uppercase;
 	color: #D3B1A9;
 }
 p.small {
-	font-family: "Comic Sans MS";
+	font-family: "Ubuntu Mono", "Comic Sans MS";
 	font-size: 18px;
-	text-decoration: underline !important
+	text-decoration: underline !important;
 	font-variant: small-caps;
+	font-weight: bold;
 	color: #D3B1A9;
 }
-
 span {
 	color: #D7BFBA;
 }
-
-span {
+span.ul {
 	color: #D7BFBA;
-	text-decoration: underline !important
+	text-decoration: underline !important;
+	font-variant: ;
+	font-size: 16px;
+	font-weight: ;
+}
+ul.link {
+	text-align: center;
+	padding: 0;
+	list-style-type: none;
 }
 
-/* Links */
+li {
+	margin: 5px;
+}
+
+/* Links 	*/
 a:link, a:visited {
 	color: #D7BFBA;
 	text-decoration: none;
 }
+
 /* Mouse Over */
 a:hover {
 	color: #F03710;
@@ -61,8 +73,7 @@ a:hover {
 }
 
 /* Content Margin (NOT ACTIVE)*/
-/*
-#content {
+/*#content {
 	border: 1px solid black;
 	margin: 32% 29%;
 	background-color: ;
@@ -73,36 +84,31 @@ a:hover {
 /* Tab 1 */
 #sociallinks {
 	text-align: center;
-	left: 15%
-	top: 40%
+	left: 5%;
 	position: absolute;
 }
 
 #generallinks {
 	text-align: center;
-	left: 30%
-	top: 40%
+	left: 25%;
 	position: absolute;
 }
 
 #medialinks {
 	text-align: center;
-	left: 45%
-	top: 40%
+	left: 45%;
 	position: absolute;
 }
 
 #musiclinks {
 	text-align: center;
-	left: 60%
-	top: 40%
+	left: 65%;
 	position: absolute;
 }
 
 #gamelinks {
 	text-align: center;
-	left: 75%
-	top: 40%
+	left: 85%;
 	position: absolute;
 }
 
@@ -159,14 +165,32 @@ a:hover {
 .dropdown:hover .dropdown-steam {
 	display: block;
 }*/
+
+/* Search Container */
+<!-- Unable to link to div.searchcontainer -->
+div.searchcontainer {
+	text-align: center;
+}
+
+input.searchBar {
+	border: 3px solid #D7BFBA;
+	background-color: #1C3044;
+	text-align: center;
+	width: 25%;
+	padding: 10px;
+}
 </style>
  
 <!-- Webpage Body -->
  
 <!-- Search Bar -->
-<div id="searchcontainer">
+<div id="searchcontainer" style="
+	text-align: center;
+	padding-top: 10px;
+	left: 20px;"
+>
 	<form class="search" method="get" action="https://google.com/search">
-		<input class="searchBar" type="text" name="q" placeholder="" autofocus search_/>
+		<input class="searchBar" type="text" name="q" placeholder="Google" autofocus>
 	</form>
 </div>
 
@@ -175,53 +199,59 @@ a:hover {
 <!-- Tab 1 -->
 <div id="LinksTab" class="tabcontent">
 	<div id="sociallinks">
-		<p class="small">Social</p>
+		<p class="upper">Social</p>
+		<ul class="link">
 			<span class="ul">Facebook</span>
+			<li><a href="https://www.facebook.com/">Home</a></li>
+			<li><a href="https://m.me/">Message</a></li>
 			<p></p>
-			<a href="https://www.facebook.com/">Home</a>
-			<a href="https://m.me/">Message</a>
-			<p></p>
-			<a href="https://www.facebook.com/">Twitter</a>
-			<a href="https://www.facebook.com/">Instagram</a>
+			<li><a href="https://www.facebook.com/">Twitter</a></li>
+			<li><a href="https://www.facebook.com/">Instagram</a></li>
+		</ul>
 	</div>
 	
 	<div id="generallinks">
-		<p class="small">General</p>
-			<span>Mail</span>
+		<p class="upper">General</p>
+		<ul class="link">
+			<span class="ul">Mail</span>
+			<li><a href="https://www.hotmail.com">Hotmail</a></li>
+			<li><a href="https://mail.google.com/mail/u/0/">G Proze</a></li>
+			<li><a href="https://mail.google.com/mail/u/2/">G Brinx</a></li>
 			<p></p>
-			<a href="https://www.hotmail.com">Hotmail</a>
-			<a href="https://mail.google.com/mail/u/0/">Gmail</a>
-			<p></p>
-			<a href="https://www.evernote.com">Evernote</a>
+			<li><a href="https://www.evernote.com">Evernote</a></li>
+		</ul>
 	</div>
 		
 	<div id="medialinks">
-		<p class="small">Media</p>
-		<div class="dropdown">
-			<span>YouTube</span>
+		<p class="upper">Media</p>
+		<ul class="link">
+			<span class="ul">YouTube</span>
+			<li><a href="https://www.youtube.com/playlist?list=WL">Watch List</a></li>
+			<li><a href="https://www.youtube.com/feed/subscriptions">Feed</a></li>
 			<p></p>
-		<div class="dropdown-youtube">
-			<a href="https://www.youtube.com/feed/subscriptions">Feed</a>
-			<a href="https://www.youtube.com/playlist?list=WL">Watch List</a>
+			<li><a href="https://www.netflix.com/browse">Netflix</a></li>
 			<p></p>
-			<a href="https://www.netflix.com/browse">Netflix</a>
-		</div>
+			<span class="ul">Twitch</span>
+			<li><a href="https://twitch.tv/">Home</a></li>
+			<li><a href="https://twitch.tv/brinxmane/chat?popout=">Chat</a></li>
+		</ul>
 	</div>
 		
 	<div id="musiclinks">
-		<p class="small">Music</p>
-			<a href="https://soundcloud.com">SoundCloud</a>
-			<a href="https://play.spotify.com/browse">Spotify</a>
+		<p class="upper">Music</p>
+		<ul class="link">
+			<li><a href="https://soundcloud.com">SoundCloud</a></li>
+			<li><a href="https://play.spotify.com/browse">Spotify</a></li>
+		</ul>
 	</div>
 		
 	<div id="gamelinks">
-		<p class="small">Game</p>
-		<div class="dropdown">
-			<span>Steam</span>
-		<div class="dropdown-steam">
-			<a href="http://store.steampowered.com">Store</a>
-			<a href="http://steamcommunity.com/my/home">Home</a>
-		</div>
+		<p class="upper">Game</p>
+		<ul class="link">
+			<span class="ul">Steam</span>
+			<li><a href="http://store.steampowered.com">Store</a></li>
+			<li><a href="http://steamcommunity.com/my/home">Home</a></li>
+		</ul>
 	</div>
 </div>
  
