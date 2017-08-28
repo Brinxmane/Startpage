@@ -3,201 +3,39 @@
 <!-- Brinx's First Startpage -->
 
 <html>
+<link rel="stylesheet" href="style.css">
+
+<!-- Tab settings (info that will be displayed within the tab). -->
+<link rel="icon" href="images/favicon.ico"/>
+<title>~/</title>
+
 <head>
-<!-- To change Favicon (icon in tab) replace file located at webpage root. "favicon.ico" -->
-<link rel="icon" href="favicon.ico"/>
- 
-<!-- This is the title within the tab. -->
-<title>° . °</title>
- 
-<!-- Styles: used to format the web page. -->
-<style type="text/css">
-/* Background */
-html, body {
-	background: url('images/bg/setup.gif') fixed center;
-	background-size: cover;
-}
-
-/* Font Styling */
-#content {
-	font-family: "Ubuntu", "Tahoma";
-	font-size: 16px;
-	text-decoration: none !important;
-	font-variant: normal;
-}
-p.upper {
-	font-family: "Ubuntu Mono", "Comic Sans MS";
-	font-size: 18px;
-	text-decoration: ;
-	text-transform: uppercase;
-	color: #D3B1A9;
-}
-p.small {
-	font-family: "Ubuntu Mono", "Comic Sans MS";
-	font-size: 18px;
-	text-decoration: underline !important;
-	font-variant: small-caps;
-	font-weight: bold;
-	color: #D3B1A9;
-}
-span {
-	color: #D7BFBA;
-}
-span.ul {
-	color: #D7BFBA;
-	text-decoration: underline !important;
-	font-variant: ;
-	font-size: 16px;
-	font-weight: ;
-}
-ul.link {
-	text-align: center;
-	padding: 0;
-	list-style-type: none;
-}
-
-li {
-	margin: 5px;
-}
-
-/* Links 	*/
-a:link, a:visited {
-	color: #D7BFBA;
-	text-decoration: none;
-}
-
-/* Mouse Over */
-a:hover {
-	color: #F03710;
-	text-decoration: underline;
-}
-
-/* Content Margin (NOT ACTIVE)*/
-/*#content {
-	border: 1px solid black;
-	margin: 32% 29%;
-	background-color: ;
-	position: ;
-}
-*/
-
-/* Tab 1 */
-#sociallinks {
-	text-align: center;
-	left: 5%;
-	position: absolute;
-}
-
-#generallinks {
-	text-align: center;
-	left: 25%;
-	position: absolute;
-}
-
-#medialinks {
-	text-align: center;
-	left: 45%;
-	position: absolute;
-}
-
-#musiclinks {
-	text-align: center;
-	left: 65%;
-	position: absolute;
-}
-
-#gamelinks {
-	text-align: center;
-	left: 85%;
-	position: absolute;
-}
-
-/* Dropdowns (NOT IN USE) *
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-/* Facebook 
-.dropdown-facebook {
-	display: none;;
-	position: absolute
-	background-color: #BB88D8;
-	min-width: 160px;
-	padding: 10px 10px;
-}
-.dropdown:hover .dropdown-facebook {
-	display: block;
-}*/
-
-/* Mail */
-.dropdown-mail {
-	display: none;;
-	position: absolute
-	background-color: #BB88D8;
-	min-width: 160px;
-	padding: 10px 10px;
-}
-.dropdown:hover .dropdown-mail {
-	display: block;
-}
-
-/* YouTube */
-.dropdown-youtube {
-	display: none;;
-	position: absolute
-	background-color: #BB88D8;
-	min-width: 160px;
-	padding: 10px 10px;
-}
-.dropdown:hover .dropdown-youtube {
-	display: block;
-}
-
-/* Steam */
-.dropdown-steam {
-	display: none;;
-	position: absolute
-	background-color: #BB88D8;
-	min-width: 160px;
-	padding: 10px 10px;
-}
-.dropdown:hover .dropdown-steam {
-	display: block;
-}*/
-
-/* Search Container */
-<!-- Unable to link to div.searchcontainer -->
-div.searchcontainer {
-	text-align: center;
-}
-
-input.searchBar {
-	border: 3px solid #D7BFBA;
-	background-color: #1C3044;
-	text-align: center;
-	width: 25%;
-	padding: 10px;
-}
-</style>
- 
 <!-- Webpage Body -->
  
 <!-- Search Bar -->
 <div id="searchcontainer" style="
 	text-align: center;
 	padding-top: 10px;
-	left: 20px;"
+	padding-right: 4%;"
 >
 	<form class="search" method="get" action="https://google.com/search">
 		<input class="searchBar" type="text" name="q" placeholder="Google" autofocus>
 	</form>
 </div>
 
+<!-- URL Bar --
+<div id="urlcontainer" style="
+	text-align: left;
+	padding-top: 10px;
+	padding-left: 10%;"
+>
+	<input autocomplete="off" autofocus id="input-box" onkeydown="return keyDown(event)" spellcheck="false" size="16">
+</div>-->
+
 <div id="content">
 
 <!-- Tab 1 -->
-<div id="LinksTab" class="tabcontent">
+<div id="LinksTab" class="tabcontent2">
 	<div id="sociallinks">
 		<p class="upper">Social</p>
 		<ul class="link">
@@ -218,10 +56,18 @@ input.searchBar {
 			<li><a href="https://mail.google.com/mail/u/0/">G Proze</a></li>
 			<li><a href="https://mail.google.com/mail/u/2/">G Brinx</a></li>
 			<p></p>
-			<li><a href="https://www.evernote.com">Evernote</a></li>
+			<li><a href="https://www.evernote.com/Home.action?login=true">Evernote</a></li>
 		</ul>
 	</div>
-		
+
+	<div id="musiclinks">
+		<p class="upper">Music</p>
+		<ul class="link">
+			<li><a href="https://soundcloud.com">SoundCloud</a></li>
+			<li><a href="https://play.spotify.com/browse">Spotify</a></li>
+		</ul>
+	</div>	
+
 	<div id="medialinks">
 		<p class="upper">Media</p>
 		<ul class="link">
@@ -237,20 +83,60 @@ input.searchBar {
 		</ul>
 	</div>
 		
-	<div id="musiclinks">
-		<p class="upper">Music</p>
-		<ul class="link">
-			<li><a href="https://soundcloud.com">SoundCloud</a></li>
-			<li><a href="https://play.spotify.com/browse">Spotify</a></li>
-		</ul>
-	</div>
-		
 	<div id="gamelinks">
 		<p class="upper">Game</p>
 		<ul class="link">
 			<span class="ul">Steam</span>
 			<li><a href="http://store.steampowered.com">Store</a></li>
 			<li><a href="http://steamcommunity.com/my/home">Home</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- Tab 2 -->
+<div id="LinksTab2" class="tabcontent2">
+	<div id="forumlinks">
+		<p class="upper">Forum</p>
+		<ul class="link">
+			<span class="ul">Reddit</span>
+			<li><a href="https://reddit.com/r/unixporn/">/r/unixporn</a></li>
+			<li><a href="https://reddit.com/r/2007scape/">/r/2007scape</a></li>
+			<p></p>
+			<span class="ul">4chan</span>
+			<li><a href="https://4chan.org/wg/catalog/">/wg/</a></li>
+			<li><a href="https://4chan.org/g/catalog/">/g/</a></li>
+		</ul>
+	</div>
+	
+	<div id="githublinks">
+		<p class="upper">Github</p>
+		<ul class="link">
+			<li><a href="https://github.com/Brinxmane">Home</a></li>
+			<li><a href="https://github.com/Brinxmane/Startpage">Startpage</a></li>
+		</ul>
+	</div>
+		
+	<div id="podcastlinks">
+		<p class="upper">Podcast</p>
+		<ul class="link">
+			<span class="ul">No Jumper</span>
+			<li><a href="https://soundcloud.com/nojumper/tracks">SC</a> / <a href="https://www.youtube.com/playlist?list=PLCqGc7uWCn7sM8dm4yyIh2nlDXh5AL48_">YT</li>
+		</ul>
+	</div>
+		
+	<div id="shoplinks">
+		<p class="upper">Shop</p>
+		<ul class="link">
+			<li><a href="https://www.g59recordsmerchandise.com/">G*59</a></li>
+			<li><a href="http://cottonon.com/AU/">CottonOn</a></li>
+		</ul>
+	</div>
+		
+	<div id="codelinks">
+		<p class="upper">Code</p>
+		<ul class="link">
+			<span class="ul">Steam</span>
+			<li><a href="https://www.w3schools.com/default.asp">W3Schools</a></li>
 		</ul>
 	</div>
 </div>

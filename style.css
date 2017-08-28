@@ -1,0 +1,241 @@
+/* Stylesheet for Brinx's First Startpage */
+
+/* Background */
+html, body {
+	background: url('files/images/bg/setup.gif') fixed center;
+	background-size: cover;
+	font-family: "Ubuntu", "Tahoma";
+	font-size: 16px;
+	color: #D3b1A9;
+}
+
+/* Colors */
+:root {
+	--border: #D7BFBA;
+	--background: #1C3044;
+}
+
+/* Font Styling */
+#content {
+	font-family: "Ubuntu", "Tahoma";
+	font-size: 16px;
+	text-decoration: none !important;
+	font-variant: normal;
+}
+p.upper {
+	font-family: "Ubuntu Mono", "Comic Sans MS";
+	font-size: 18px;
+	text-decoration: ;
+	text-transform: uppercase;
+	color: #D3B1A9;
+}
+p.small {
+	font-family: "Ubuntu Mono", "Comic Sans MS";
+	font-size: 18px;
+	text-decoration: underline !important;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: #D3B1A9;
+}
+span {
+	color: #D7BFBA;
+}
+span.ul {
+	color: #D7BFBA;
+	text-decoration: underline !important;
+	font-variant: ;
+	font-size: 16px;
+	font-weight: ;
+}
+ul.link {
+	text-align: center;
+	padding: 0;
+	list-style-type: none;
+}
+
+li {
+	margin: 5px;
+}
+
+/* Links 	*/
+a:link, a:visited {
+	color: #D7BFBA;
+	text-decoration: none;
+}
+
+/* Mouse Over */
+a:hover {
+	color: #F03710;
+	text-decoration: underline;
+}
+
+/* Content Margin (NOT ACTIVE)*/
+/*#content {
+	border: 1px solid black;
+	margin: 32% 29%;
+	background-color: ;
+	position: ;
+}
+*/
+
+/* Tab 1 */
+#sociallinks {
+	text-align: center;
+	left: 5%;
+	top: 15%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#generallinks {
+	text-align: center;
+	left: 25%;
+	top: 15%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#musiclinks {
+	text-align: center;
+	left: 45%;
+	top: 15%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#medialinks {
+	text-align: center;
+	left: 85%;
+	top: 15%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#gamelinks {
+	text-align: center;
+	left: 65%;
+	top: 15%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+/* Tab 2 */
+#forumlinks {
+	text-align: center;
+	left: 5%;
+	top: 60%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#githublinks {
+	text-align: center;
+	left: 25%;
+	top: 60%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#podcastlinks {
+	text-align: center;
+	left: 45%;
+	top: 60%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#shoplinks {
+	text-align: center;
+	left: 65%;
+	top: 60%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+#codelinks {
+	text-align: center;
+	left: 85%;
+	top: 60%;
+	position: absolute;
+	border: 1px solid var(--border);
+	background-color: var(--background);
+}
+
+
+/* Dropdowns (NOT IN USE) *
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Facebook *
+.dropdown-facebook {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-facebook {
+	display: block;
+}
+
+/* Mail *
+.dropdown-mail {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-mail {
+	display: block;
+}
+
+/* YouTube *
+.dropdown-youtube {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-youtube {
+	display: block;
+}
+
+/* Steam *
+.dropdown-steam {
+	display: none;;
+	position: absolute
+	background-color: #BB88D8;
+	min-width: 160px;
+	padding: 10px 10px;
+}
+.dropdown:hover .dropdown-steam {
+	display: block;
+}
+*/
+
+/* Search Container */
+<!-- Unable to link to div.searchcontainer -->
+div.searchcontainer {
+	text-align: center;
+}
+
+input.searchBar {
+	border: 3px solid #D7BFBA;
+	background-color: #1C3044;
+	text-align: center;
+	width: 25%;
+	padding: 10px;
+}
