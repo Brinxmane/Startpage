@@ -13,11 +13,7 @@
 <!-- Webpage Body -->
  
 <!-- Search Bar -->
-<div id="searchcontainer" style="
-	text-align: center;
-	padding-top: 10px;
-	padding-right: 4%;"
->
+<div class="searchcontainer" style="text-align: center;padding-top: 42%;padding-left: 1%;">
 	<form class="search" method="get" action="https://google.com/search">
 		<input class="searchBar" type="text" name="q" placeholder="Google" autofocus>
 	</form>
@@ -32,10 +28,18 @@
 	<input autocomplete="off" autofocus id="input-box" onkeydown="return keyDown(event)" spellcheck="false" size="16">
 </div>-->
 
+
 <div id="content">
 
+<!-- Tabs -->
+<div class="tab">
+	<button class="tablinks" onclick="openCity(event, 'Tab1')" id="defaultOpen"><input class="ico" type="image" src="files/images/ico/home.ico" width="20" height="20"></button>
+	<button class="tablinks" onclick="openCity(event, 'Tab2')"><input class="ico" type="image" src="files/images/ico/tafe.ico" width="20" height="20"></button>
+</div>
+
 <!-- Tab 1 -->
-<div id="LinksTab" class="tabcontent2">
+<div id="Tab1" class="tabcontent">
+<!-- Top -->
 	<div id="sociallinks">
 		<p class="upper">Social</p>
 		<ul class="link">
@@ -80,6 +84,8 @@
 			<span class="ul">Twitch</span>
 			<li><a href="https://twitch.tv/">Home</a></li>
 			<li><a href="https://twitch.tv/brinxmane/chat?popout=">Chat</a></li>
+			<p></p>
+			<li><a href="https://twitch.tv/yungwoz">Woz</a></li>
 		</ul>
 	</div>
 		
@@ -91,28 +97,32 @@
 			<li><a href="http://steamcommunity.com/my/home">Home</a></li>
 		</ul>
 	</div>
-</div>
-
-<!-- Tab 2 -->
-<div id="LinksTab2" class="tabcontent2">
+<!-- Bottom -->
+<div>
 	<div id="forumlinks">
 		<p class="upper">Forum</p>
 		<ul class="link">
-			<span class="ul">Reddit</span>
+			<li><a href="https://reddit.com/" style="
+				font-size: 16px;
+				text-decoration: underline !important;">Reddit</a></li>
 			<li><a href="https://reddit.com/r/unixporn/">/r/unixporn</a></li>
 			<li><a href="https://reddit.com/r/2007scape/">/r/2007scape</a></li>
 			<p></p>
-			<span class="ul">4chan</span>
+			<li><a href="https://www.4chan.org/" style="
+				font-size: 16px;
+				text-decoration: underline !important;">4Chan</a></li>
 			<li><a href="https://4chan.org/wg/catalog/">/wg/</a></li>
 			<li><a href="https://4chan.org/g/catalog/">/g/</a></li>
+			<li><a href="https://4chan.org/t/catalog/">/t/</a></li>
 		</ul>
 	</div>
 	
-	<div id="githublinks">
-		<p class="upper">Github</p>
+	<div id="torrentlinks">
+		<p class="upper">Torrent</p>
 		<ul class="link">
-			<li><a href="https://github.com/Brinxmane">Home</a></li>
-			<li><a href="https://github.com/Brinxmane/Startpage">Startpage</a></li>
+			<li><a href="http://xpau.se/">xPau.se</a></li>
+			<li><a href="https://yify-movies.to/recent">YIFY</a></li>
+			<li><a href="https://otorrents.com/">oTorrents</a></li>
 		</ul>
 	</div>
 		
@@ -120,7 +130,10 @@
 		<p class="upper">Podcast</p>
 		<ul class="link">
 			<span class="ul">No Jumper</span>
-			<li><a href="https://soundcloud.com/nojumper/tracks">SC</a> / <a href="https://www.youtube.com/playlist?list=PLCqGc7uWCn7sM8dm4yyIh2nlDXh5AL48_">YT</li>
+			<li><a href="https://soundcloud.com/nojumper/tracks">SC</a> / <a href="https://www.youtube.com/playlist?list=PLCqGc7uWCn7sM8dm4yyIh2nlDXh5AL48_">YT</a></li>
+			<p></p>
+			<span class="ul">Woz</span>
+			<li><a href="https://www.youtube.com/channel/UCVlA2tFF5crlggM8r8gro8Q">YT</a></li>
 		</ul>
 	</div>
 		
@@ -135,13 +148,71 @@
 	<div id="codelinks">
 		<p class="upper">Code</p>
 		<ul class="link">
-			<span class="ul">Steam</span>
 			<li><a href="https://www.w3schools.com/default.asp">W3Schools</a></li>
+			<p></p>
+			<span class="ul">Github</span>
+			<li><a href="https://github.com/Brinxmane">Home</a></li>
+			<li><a href="https://github.com/Brinxmane/Startpage">Startpage</a></li>
 		</ul>
 	</div>
 </div>
+</div>
  
+ <!-- Tab 2 -->
+ <div id="Tab2" class="tabcontent">
+ <!-- Top -->
+	<div id="workmaillinks">
+		<p class="upper">Mail</p>
+		<ul class="link">
+			<li><a href="https://outlook.office365.com/owa/">Outlook</a></li>
+			<li><a href="https://www.hotmail.com">Hotmail</a></li>
+		</ul>
+	</div>
+	
+	<div id="officelinks">
+		<p class="upper">TAFE</p>
+		<ul class="link">
+			<li><a href="http://www.southregionaltafe.wa.edu.au/">Tafe Home</a></li>
+			<li><a href="https://www.office.com/1/">Office</a></li>
+		</ul>
+	</div>
+ 
+ 	<div id="surveylinks">
+		<p class="upper">Survey</p>
+		<ul class="link">
+			<li><a href="https://mrapps.mainroads.wa.gov.au/publicmaps/surveyportal">Main Roads Portal</a></li>
+			<li><a href="http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/auspos/step-by-step">AusPOS</a></li>
+			<li><a href="http://www.icsm.gov.au/gda/tech.html">GDA Tech</a></li>
+		</ul>
+	</div>
+	
  </div>
+ 
+ </div> <!-- End of Content -->
+ 
+ <!-- Script for Tabs -->
+ <script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    };
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<script>
+onload = function {showTab('Tab1')};
+</script>
  
 </head>
 </html>
