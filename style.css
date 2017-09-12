@@ -1,7 +1,7 @@
 /* Stylesheet for Brinx's First Startpage */
 
 /* Background */
-html, body {
+html, body { 
 	background: url('files/images/bg/setup.gif') fixed center;
 	background-size: cover;
 	font-family: "Ubuntu", "Tahoma";
