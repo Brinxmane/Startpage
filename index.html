@@ -14,9 +14,9 @@
  
 <!-- Search Bar -->
 <div class="searchcontainer" style="text-align: center;padding-top: 42%;padding-left: 1%;">
-	<form class="search" method="get" action="https://google.com/search">
-		<input class="searchBar" type="text" name="q" placeholder="Google" autofocus>
-	</form>
+<!--	<form class="search" method="get" action="https://google.com/search"> -->
+		<input id="search" type="text" placeholder="~   |  y  |  i  |  w  |  u  |  r  |  4" autofocus>
+<!--	</form> -->
 </div>
 
 <div id="content">
@@ -28,6 +28,14 @@
 	<button class="tablinks" onclick="openCity(event, 'Tab3')"><input class="ico" type="image" src="files/images/ico/tafe.ico" width="30" height="30"></button>
 </div>
 
+<!-- Weather (Not currently working)
+<div id="MetaData">
+	<div id="weather">
+		<div id="temp_curr" title="Current temperature"></div>
+	</div>
+</div>
+-->
+
 <!-- Tab 1 (Home General Tab) -->
 <div id="Tab1" class="tabcontent">
 <!-- Top -->
@@ -38,8 +46,8 @@
 			<li><a href="https://www.facebook.com/">Home</a></li>
 			<li><a href="https://m.me/">Message</a></li>
 			<p></p>
-			<li><a href="https://www.facebook.com/">Twitter</a></li>
-			<li><a href="https://www.facebook.com/">Instagram</a></li>
+			<li><a href="https://www.twitter.com/">Twitter</a></li>
+			<li><a href="https://www.instagram.com/">Instagram</a></li>
 		</ul>
 	</div>
 	
@@ -104,7 +112,7 @@
 				text-decoration: underline !important;">4Chan</a></li>
 			<li><a href="https://boards.4chan.org/wg/catalog">/wg/</a></li>
 			<li><a href="https://boards.4chan.org/g/catalog">/g/</a></li>
-			<li><a href="https://boards.4chan.org/t/catalog">/t/></li>
+			<li><a href="https://boards.4chan.org/t/catalog">/t/</a></li>
 		</ul>
 	</div>
 	
@@ -151,12 +159,14 @@
 </div>
 </div>
  
-
- <!-- Tab 2 (Home Comfy Tab) -->
- <div id="Tab2" class="tabcontent">
- <!-- Top -->
-	 <button><a href="https://www.netflix.com/browse">Netflix</a></button>
- </div> <!-- End of Content -->
+<!-- Tab 2 (Home Comfy Tab) -->
+<div id="Tab2" class="tabcontent">
+<!-- Top -->
+	<div id="comfygeneral">
+	<button class="comfy1" onclick="window.location.href='https://www.netflix.com/browse'">Netflix</button>
+	<button class="comfy2" onclick="window.location.href='https://www.youtube.com/feed/subscriptions'">YouTube</button>
+	</div>
+</div>
 
  <!-- Tab 3 (Study/Work Tab) -->
  <div id="Tab3" class="tabcontent">
@@ -190,8 +200,8 @@
  
  </div> <!-- End of Content -->
  
- <!-- Script for Tabs -->
- <script>
+<script>
+// Tab Script
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -205,13 +215,115 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-</script>
 
-<script>
-onload = function {showTab('Tab1')};
+// Search Arguments Script
+String.prototype.replaceChars = function(character, replacement){
+    var str = this;
+    var a;
+    var b;
+    for(var i=0; i < str.length; i++){
+        if(str.charAt(i) == character){
+            a = str.substr(0, i) + replacement;
+            b = str.substr(i + 1);
+            str = a + b;
+        }
+    }
+    return str;
+}
+function search(query){
+    switch(query.substr(0, 2)){
+        case "~i":
+            query = query.substr(3);
+            window.location = "https://www.google.com/search?tbm=isch&q=" +
+                query.replaceChars(" ", "%20");
+            break;
+
+        case "~y":
+            query = query.substr(3);
+            window.location =
+                "https://www.youtube.com/results?search_query=" +
+                query.replaceChars(" ", "%20");
+            break;
+			
+		case "~w":
+			query = query.substr(3);
+			window.location =
+				"https://en.wikipedia.org/w/index.php?search=" +
+				query.replaceChars(" ", "%20");
+			break;
+
+		case "~u":
+			query=query.substr(3);
+			window.location = 
+				"http://" + 
+				query.replaceChars(" ", "%20");
+            break;
+			
+		// 4chan Search
+		// Typing "~4" followed by a thread, eg; (wg, g, pol) and "#" enters the catalog for that thread.
+		// Typing "~4" followed by a thread and a query, eg; (wg/comfy) enters the catalog for that thread with the searched query. Note: (queries can only be one word)
+		case "~4":
+			query=query.substr(3);
+			window.location =
+				"https://boards.4chan.org/" +
+				query.replaceChars("#", "/catalog").replace(" ", "/");
+			//	query.replaceChars(" ", "%20").replace("#", "/catalog");
+			break;
+
+		// Reddit Search
+		case "~r":
+			query=query.substr(3);
+			window.location =
+				"https://www.reddit.com/r/" +
+				query.replaceChars(" ", "/search?q=").replace("07", "2007scape").replace("up", "unixporn");
+			break;
+			
+        default:
+            window.location="https://www.google.com.au/search?q=" +
+                query.replaceChars(" ", "+");
+    }
+}
+	window.onload = function(){
+    searchinput = document.getElementById("search");
+    if(!!searchinput){
+        searchinput.addEventListener("keypress", function(a){
+            var key = a.keyCode;
+            if(key == 13){
+                var query = this.value;
+                search(query);
+            }
+        });
+    }
+ 
+    var search_sqr = document.getElementById("search_sqr");
+ 
+    }
+		
+// Weather Script
+var json_url = "http://api.openweathermap.org/data/2.5/weather?id=2643743&appid=832719dabc0aaac91c4a93c2a64e12d4&units=metric";
+var temp_curr;
+var temp_low;
+var temp_high;
+$.when(
+  $.getJSON(json_url)
+  ).done( function(json_obj) {
+    city = json_obj["name"];
+    temp_curr = (json_obj["main"]["temp"]);
+    temp_low = (json_obj["main"]["temp_min"]);
+    temp_high = (json_obj["main"]["temp_max"]);
+    insertWeatherInfo();
+  }
+);
+
+function insertWeatherInfo() {
+  $("#temp_curr").prepend(temp_curr + "&deg;c");
+  $("#temp_low").append(temp_low + "&deg;c");
+  $("#temp_high").append(temp_high + "&deg;c");
+}
+	
+// onload = function {showTab('Tab1')}; // Irrelevent line
 </script>
  
 </head>
